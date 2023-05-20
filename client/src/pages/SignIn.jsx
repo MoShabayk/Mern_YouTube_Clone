@@ -81,7 +81,7 @@ const SignIn = () => {
     e.preventDefault()
     dispatch(loginStart()) 
     try {
-      const res = await axios.post('/auth/signin',{name,password})
+      const res = await axios.post(`${process.env.REACT_APP_SIGNIN}`,{name,password})
       dispatch(loginSuccess(res.data))
       //console.log(res.data)
     } catch (error) {
@@ -96,7 +96,7 @@ const SignIn = () => {
   const handleRegister = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post('/auth/signup',{name,email,password})
+      const res = await axios.post(`${process.env.REACT_APP_SIGNUP}`,{name,email,password})
       console.log(res.data)
     } catch (error) {
       console.log(error)
@@ -107,7 +107,7 @@ const SignIn = () => {
     dispatch(loginStart())
     signInWithPopup(auth,provider)  
     .then((result) => {
-      axios.post('/auth/googlelogin',{
+      axios.post(`${process.env.REACT_APP_GOOGLELOGIN}`,{
         name:result.user.displayName,
         email:result.user.email,
         img: result.user.photoURL
