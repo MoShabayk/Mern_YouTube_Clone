@@ -48,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://motube-3l6j.onrender.com"
+  "proxy": "https://motube-3l6j.onrender.com/api/"
 }
