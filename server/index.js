@@ -48,5 +48,4 @@ app.use((err,req,res,next)=>{
 app.listen(process.env.WEB_SITE,()=>{
     connect()
     console.log("Connected!");
-    console.log(${process.env.WEB_SITE});
 });
