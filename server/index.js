@@ -6,6 +6,7 @@ import videosRoutes from "./routes/videos.js"
 import commentsRoutes from "./routes/comments.js"
 import authRoutes from "./routes/auth.js"
 import cookieParser from "cookie-parser"
+import emptyRoutes from "./routes/emptyRoutes.js"
 
 
 
@@ -24,6 +25,7 @@ const connect=() =>{
 
 app.use(cookieParser())
 app.use(express.json())
+app.use('/',emptyRoutes)
 app.use("/api/auth",authRoutes)
 app.use("/api/users",usersRoutes)
 app.use("/api/videos",videosRoutes)
