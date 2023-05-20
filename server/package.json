@@ -15,7 +15,7 @@
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
-    "express": "^4.17.1",
+    "express": "^x.x.x",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.1",
     "tenv": "^0.2.3"
